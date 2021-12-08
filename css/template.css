@@ -4,6 +4,10 @@
     --main-color: yellowgreen;
 }
 
+body {
+    transition: all 0.3s ease-out;
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -21,4 +25,35 @@
 
 .header i {
     float: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#loader {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: lightcyan;
+    opacity: 1;
+    transition: opacity 0.6s linear;
+}
+
+#loader .hidden {
+    opacity: 0;
+}
+
+#loader .container-fluid {
+    margin: 0;
+    position: relative;
+    top: 40%;
+}
+
+.hid {
+    visibility: hidden;
 }

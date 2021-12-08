@@ -15,20 +15,47 @@
 </head>
 
 <body>
+    <div id="loader">
+        <div class="container-fluid text-center">
+            <div class="nes-text is-primary">Cargando regalo...</div>
+            <br>
+            <progress class="nes-progress is-pattern" value="" max="100"></progress>
+        </div>
+    </div>
     <header class="header">
         <i class="nes-icon heart"></i>
         <h1>Regalo para mi amorcito</h1>
     </header>
     <div class="container-fluid">
-        <h1>fgdbd</h1>
+        <h2>Holis mi vida!</h2>
+        <p id="typedtext"></p>
         <span class="nes-text is-primary">Primary</span>
         <span class="nes-text is-success">Success</span>
         <span class="nes-text is-warning">Warning</span>
         <span class="nes-text is-error">Error</span>
         <span class="nes-text is-disabled">Disabled</span>
         <button type="button" class="nes-btn is-success">:v</button>
+
+        <!-- Rounded dialog -->
+        <section>
+            <button id="btnShowDialog" type="button" class="nes-btn is-primary">
+                Open rounded dialog
+            </button>
+            <dialog class="nes-dialog is-rounded" id="dialog-rounded">
+                <form method="dialog">
+                    <p class="title">¿Quieres ser mi novia?</p>
+                    <menu class="dialog-menu">
+                        <button id="btnYes" class="nes-btn is-success">Si</button>
+                        <button id="btnNo1" class="nes-btn is-error hid">No</button>
+                        <button id="btnNo2" class="nes-btn is-error">No</button>
+                    </menu>
+                </form>
+            </dialog>
+        </section>
+
     </div>
 
+    <script src="js/addons.js"></script>
 </body>
 
 </html>
