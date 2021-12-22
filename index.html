@@ -34,7 +34,7 @@
 
         <!-- Rounded dialog -->
         <section>
-            <button id="btnShowDialog" type="button" class="nes-btn is-primary">
+            <button id="btnShowDialog" type="button" class="nes-btn is-primary" hidden>
                 Presiona aqui para mostrar una sorpresa 🤭
             </button>
             <dialog class="nes-dialog is-rounded" id="dialog-rounded">
@@ -47,6 +47,18 @@
                     </menu>
                 </form>
             </dialog>
+            <dialog class="nes-dialog is-rounded" id="dialog-rounded2">
+                <form method="dialog">
+                    <p class="title nes-text is-error">¡Feliz Navidad!</p>
+                    <p>
+                        Mi novia chula hermosa preciosa, el amor de mi vida
+                        <i class="nes-icon heart"></i>
+                    </p>
+                    <menu class="dialog-menu">
+                        <button class="nes-btn is-primary">Cerrar</button>
+                    </menu>
+                </form>
+            </dialog>
         </section>
 
         <section class="icon-list">
@@ -56,6 +68,7 @@
         </section>
 
     </div>
+    <audio id="music" src="assets/Jingle-Bells-Singing-Bell.mp3"></audio>
     <audio id="audioYes" src="assets/grunt-birthday-party.mp3"></audio>
     <audio id="audioNo" src="assets/engineer_no01.mp3"></audio>
     <script src="js/addons.js"></script>

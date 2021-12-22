@@ -1,19 +1,27 @@
+let $showDialogBtn = document.getElementById("btnShowDialog");
+
 let timesRun = 0;
 var interval = setInterval(() => {
     if (timesRun === 100) {
+        document.getElementById("music").play();
         clearInterval(interval);
         document.getElementById("loader").classList.toggle('hidden');
+        typewriter();
+        setTimeout(() => {
+            $showDialogBtn.removeAttribute("hidden");
+        }, 35000);
     }
     document.querySelector(".nes-progress").value = timesRun;
     timesRun++;
-}, 1);
+}, 40);
 
 // set up text to print, each item in array is new line
 var aText = new Array(
-    "¿Cómo estas hoy mi vida? Espero que estes muy bien pero muy bien",
+    "¿Cómo estas hoy mi vida? Espero que estes muy pero muy bien",
     "Sé que estas fechas son muy felices para ti y te amo tanto que quiero hacerte aun más feliz",
-    "Eres lo más especial que tengo y quiero que estemos juntos para toda la vida",
-    "Pero como todo debemos empezar por el principio jejeje...",
+    "Cada vez que te veo no dejo de pensar en lo hermosa que estas, sin importar la hora el dia ni el lugar",
+    "Eres un amor y quiero estar siempre a tu ladito",
+    "Pero como todo... Debemos empezar por el principio jejeje...",
 );
 var iSpeed = 125; // time delay of print out
 var iIndex = 0; // start printing array at this posision
@@ -45,20 +53,19 @@ function typewriter() {
     }
 }
 
-
-typewriter();
 document.addEventListener("click", (e) => {
     let $btnYes = document.getElementById("btnYes");
     let $btnNo1 = document.getElementById("btnNo1");
     let $btnNo2 = document.getElementById("btnNo2");
 
-    if (e.target.matches("#btnShowDialog")) {
+    if (e.target === $showDialogBtn) {
         document.getElementById('dialog-rounded').showModal();
     }
-    if (e.target === btnYes) {
+    if (e.target === $btnYes) {
         var audio = document.getElementById("audioYes");
         audio.play();
         onClick();
+        document.getElementById('dialog-rounded2').showModal();
     }
     if (e.target === $btnNo1) {
         e.preventDefault();
