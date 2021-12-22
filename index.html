@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/template.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
@@ -26,24 +27,19 @@
         <i class="nes-icon heart"></i>
         <h1>Regalo para mi amorcito</h1>
     </header>
-    <div class="container-fluid">
-        <h2>Holis mi vida!</h2>
+    <div class="container-fluid text-center">
+        <h2 class="nes-text is-primary">¡Hola mi amor!</h2>
         <p id="typedtext"></p>
-        <span class="nes-text is-primary">Primary</span>
-        <span class="nes-text is-success">Success</span>
-        <span class="nes-text is-warning">Warning</span>
-        <span class="nes-text is-error">Error</span>
-        <span class="nes-text is-disabled">Disabled</span>
-        <button type="button" class="nes-btn is-success">:v</button>
+        <br>
 
         <!-- Rounded dialog -->
         <section>
             <button id="btnShowDialog" type="button" class="nes-btn is-primary">
-                Open rounded dialog
+                Presiona aqui para mostrar una sorpresa 🤭
             </button>
             <dialog class="nes-dialog is-rounded" id="dialog-rounded">
                 <form method="dialog">
-                    <p class="title">¿Quieres ser mi novia?</p>
+                    <p class="title">¿Quieres ser mi novia chula preciosa?</p>
                     <menu class="dialog-menu">
                         <button id="btnYes" class="nes-btn is-success">Si</button>
                         <button id="btnNo1" class="nes-btn is-error hid">No</button>
@@ -53,8 +49,15 @@
             </dialog>
         </section>
 
-    </div>
+        <section class="icon-list">
+            <i class="nes-bulbasaur"></i>
+            <i class="nes-charmander"></i>
+            <i class="nes-squirtle"></i>
+        </section>
 
+    </div>
+    <audio id="audioYes" src="assets/grunt-birthday-party.mp3"></audio>
+    <audio id="audioNo" src="assets/engineer_no01.mp3"></audio>
     <script src="js/addons.js"></script>
 </body>
 

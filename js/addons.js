@@ -10,8 +10,10 @@ var interval = setInterval(() => {
 
 // set up text to print, each item in array is new line
 var aText = new Array(
-    "There are only 10 types of people in the world: 😘",
-    "Those who understand binary, and those who don't"
+    "¿Cómo estas hoy mi vida? Espero que estes muy bien pero muy bien",
+    "Sé que estas fechas son muy felices para ti y te amo tanto que quiero hacerte aun más feliz",
+    "Eres lo más especial que tengo y quiero que estemos juntos para toda la vida",
+    "Pero como todo debemos empezar por el principio jejeje...",
 );
 var iSpeed = 125; // time delay of print out
 var iIndex = 0; // start printing array at this posision
@@ -53,15 +55,31 @@ document.addEventListener("click", (e) => {
     if (e.target.matches("#btnShowDialog")) {
         document.getElementById('dialog-rounded').showModal();
     }
+    if (e.target === btnYes) {
+        var audio = document.getElementById("audioYes");
+        audio.play();
+        onClick();
+    }
     if (e.target === $btnNo1) {
         e.preventDefault();
+        var audio = document.getElementById("audioNo");
+        audio.play();
         $btnNo1.classList.toggle('hid');
         $btnNo2.classList.toggle('hid');
     }
     if (e.target === $btnNo2) {
         e.preventDefault();
+        var audio = document.getElementById("audioNo");
+        audio.play();
         $btnNo1.classList.toggle('hid');
         $btnNo2.classList.toggle('hid');
     }
 
 });
+
+const onClick = () => {
+    confetti({
+        particleCount: 250,
+        spread: 80,
+    });
+};
